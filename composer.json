@@ -1,0 +1,22 @@
+{
+    "name": "stougeiro/desafio-php",
+    "description": "PHP Test for Alter Solutions",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "stougeiro",
+            "email": "sidneytougeiro@msn.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {"ASPTest\\": "src/"}
+    },
+    "require": {
+        "symfony/console": "5.4.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.x-dev"
+    }
+}
