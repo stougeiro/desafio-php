@@ -13,12 +13,15 @@ This little PHP CLI application is to attend simple use cases, for demonstration
 ```bash
 docker-compose up -d
 ```
+
 ### Access
 
 ```bash
 docker-compose exec desafio-php bash
 ```
-## Usage 
+
+## Usage
+
 ### Commands
 
 Create a new user with Firstname, Lastname, Email and Age (optional).
@@ -26,12 +29,13 @@ Create a new user with Firstname, Lastname, Email and Age (optional).
 ```bash
 USER:CREATE <firstname> <lastname> <email> [<age>]
 ```
+
 | Arguments | Required | Default |
 |-----------|----------|---------|
 | firstname | yes      |         |
 | lastname  | yes      |         |
 | email     | yes      |         |
-| age       | no       | null    |  
+| age       | no       | null    |
 
 Define a password for a previously created user with Password and Password Confirmation arguments.
 The User's ID is required to execute this action.
@@ -39,6 +43,7 @@ The User's ID is required to execute this action.
 ```bash
 USER:CREATE-PWD <id> <password> <confirmation>
 ```
+
 | Arguments    | Required |
 |--------------|----------|
 | id           | yes      |
@@ -60,7 +65,22 @@ User created: {"id":"1","firstname":"John","lastname":"Doe","email":"johndoe@ema
 # output
 Password created: {"id":"1","firstname":"John","lastname":"Doe","email":"johndoe@email.com","age":"45","pass":"$2y$10$.biPMY3LjHcXyog\/JFmABunxU.UhLjJ5NZixRfT1e4Ae0HIRLJPea"}
 ```
-Author Information
-------------------
+
+## PHPUnit Tests
+
+```bash
+/opt/cli/vendor/bin/phpunit /opt/cli/tests
+
+# output
+PHPUnit 9.5.11 by Sebastian Bergmann and contributors.
+
+.................................                                 33 / 33 (100%)
+
+Time: 00:00.015, Memory: 6.00 MB
+
+OK (33 tests, 33 assertions)
+```
+
+## Author Information
 
 [sidneytougeiro@msn.com](mailto:sidneytougeiro@msn.com)
