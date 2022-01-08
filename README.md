@@ -1,12 +1,43 @@
-# Desfio PHP
+# Desafio PHP
 
-### Package dependencies
+This little PHP CLI application is to attend simple use cases, for demonstration only.
 
+## Requirements
+
+[Docker](https://www.docker.com/) pre-installed.
+
+## Commands
+
+```bash
+USER:CREATE <firstname> <lastname> <email> [<age>]
 ```
-"require": {
-    "php": "^7.3",
-    "symfony/console": "5.4.2"
-}
-```
+| Arguments | Required | Default |
+|-----------|----------|---------|
+| firstname | yes      |         |
+| lastname  | yes      |         |
+| email     | yes      |         |
+| age       | no       | null    |  
 
-### Usage
+```bash
+USER:CREATE-PWD <id> <password> <confirmation>
+```
+| Arguments    | Required |
+|--------------|----------|
+| id           | yes      |
+| password     | yes      |
+| confirmation | yes      |
+
+Example
+-------
+
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
+    - hosts: all
+      roles:
+         - ansible-role-template
+
+
+Author Information
+------------------
+
+[sidneytougeiro@msn.com](mailto:sidneytougeiro@msn.com)

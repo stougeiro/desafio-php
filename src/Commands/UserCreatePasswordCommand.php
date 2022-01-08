@@ -21,14 +21,7 @@ class UserCreatePasswordCommand extends Command
         {
             $this
                 ->setDescription('This command allows you to create a password for a user.')
-                ->setHelp('This command allows you to create a password for a user with the information as follow: id (required), password (required) and confirmation (required).')
-                ->setDefinition(
-                    new InputDefinition([
-                        new InputOption('id', 'i', InputOption::VALUE_REQUIRED),
-                        new InputOption('password', 'p', InputOption::VALUE_REQUIRED),
-                        new InputOption('confirmation', 'c', InputOption::VALUE_REQUIRED),
-                    ])
-                );
+                ->setHelp('This command allows you to create a password for a user with the information as follow: id (required), password (required) and confirmation (required).');
     
             $this
                 ->addArgument('id', InputArgument::REQUIRED, 'The ID of the user (required).')

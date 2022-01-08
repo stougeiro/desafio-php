@@ -21,15 +21,7 @@ class UserCreateCommand extends Command
     {
         $this
             ->setDescription('This command allows you to create a password for an user.')
-            ->setHelp('This command allows you to create a user with the information as follow: firstname (required), lastname (required), email (required) and age (optional).')
-            ->setDefinition(
-                new InputDefinition([
-                    new InputOption('firstname', 'f', InputOption::VALUE_REQUIRED),
-                    new InputOption('lastname', 'l', InputOption::VALUE_REQUIRED),
-                    new InputOption('email', 'e', InputOption::VALUE_REQUIRED),
-                    new InputOption('age', 'a', InputOption::VALUE_OPTIONAL),
-                ])
-            );
+            ->setHelp('This command allows you to create a user with the information as follow: firstname (required), lastname (required), email (required) and age (optional).');
 
         $this
             ->addArgument('firstname', InputArgument::REQUIRED, 'The first name of the user (required).')
