@@ -2,10 +2,10 @@
 
 namespace ASPTest\Services;
 
-use InvalidArgumentException;
 use ASPTest\Models\User;
 use ASPTest\Models\UserPassword;
 use ASPTest\Libraries\Password;
+use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 class UserPasswordService
 {
@@ -17,7 +17,7 @@ class UserPasswordService
 
         if (empty($id)) {
             throw new InvalidArgumentException('ID argument is required.');
-        } else if ( ! is_int($id)) {
+        } else if ( ! is_int($id) || $id < 0) {
             throw new InvalidArgumentException('ID argument is invalid.');
         }
 

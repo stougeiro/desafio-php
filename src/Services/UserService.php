@@ -2,8 +2,8 @@
 
 namespace ASPTest\Services;
 
-use InvalidArgumentException;
 use ASPTest\Models\User;
+use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 class UserService
 {
@@ -34,10 +34,20 @@ class UserService
             throw new InvalidArgumentException('Email argument is invalid.');
         }
 
-        if ( ! empty($age) && ($age < 1 || $age > 150)) {
+        if (null === $age) {
+            goto save;
+        } else if ( ! preg_match("/^[0-9]{1,3}$/", $age)) {
             throw new InvalidArgumentException('Age argument is invalid.');
         }
 
+        $age = (int) $age;
+
+        if ($age < 1 || $age > 150) {
+            throw new InvalidArgumentException('Age argument must be between 1 and 150.');
+        }
+
+
+        save:
 
         return User::save($data);
     }

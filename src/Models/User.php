@@ -24,7 +24,6 @@ class User
 
         $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-
         return $user;
     }
 
