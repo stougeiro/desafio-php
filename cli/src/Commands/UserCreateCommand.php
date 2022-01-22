@@ -20,7 +20,7 @@ class UserCreateCommand extends Command
     protected function configure(): void
     {
         $this
-            ->setDescription('This command allows you to create a password for an user.')
+            ->setDescription('This command allows you to create a user.')
             ->setHelp('This command allows you to create a user with the information as follow: firstname (required), lastname (required), email (required) and age (optional).');
 
         $this
